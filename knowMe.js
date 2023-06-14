@@ -26,6 +26,8 @@ function q1() {
         }
     }
 };
+q1();
+ 
 function q2() {
     let i = 0;
     while (i < 1) {
@@ -43,6 +45,8 @@ function q2() {
         }
     }
 };
+q2();
+
 function q3() {
     let i = 0;
     while (i < 1) {
@@ -60,6 +64,8 @@ function q3() {
         }
     }
 };
+q3();
+
 function q4() {
     let i = 0;
     while (i < 1) {
@@ -77,6 +83,7 @@ function q4() {
         }
     }
 };
+q4();
 function q5() {
     let i = 0;
     while (i < 1) {
@@ -94,3 +101,4 @@ function q5() {
         }
     }
 };
+q5();
