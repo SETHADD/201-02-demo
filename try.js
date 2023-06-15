@@ -4,6 +4,7 @@ let welcome = prompt("Welcome! may I know your name? ");
 //console.log(welcome);
 alert(welcome+ " welcome to the best user experience")
 
+let score = 0;
 
 //let's play a quess game
 alert("lets play a game. Please type yes/y or no/n as an answer")
@@ -23,6 +24,7 @@ function q1() {
         } else if (question1 === "yes" || question1 === "y") {
             alert("You are right!");
             i++;
+            score++;
         }
     }
 };
@@ -37,11 +39,12 @@ function q2() {
         if (question2 !== "yes" && question2 !== "y" && question2 !== "no" && question2 !== "n") {
             alert("Please provide a yes/y or no/n answer on the next try");
         } else if (question2 === "no" || question2 === "n") {
-            alert("ou are right! ");
-            i++;
-        } else if (question2 === "yes" || question2 === "y") {
             alert("Sorry! but that is true");
             i++;
+        } else if (question2 === "yes" || question2 === "y") {
+            alert("you are right! ");
+            i++;
+            score++;
         }
     }
 };
@@ -58,6 +61,7 @@ function q3() {
         } else if (question3 === "no" || question3 === "n") {
             alert(" You are right! England was never colonized");
             i++;
+            score++;
         } else if (question3 === "yes" || question3 === "y") {
             alert("Sorry! That is not right");
             i++;
@@ -80,6 +84,7 @@ function q4() {
         } else if (question4 === "yes" || question4 === "y") {
             alert("You are right!");
             i++;
+            score++;
         }
     }
 };
@@ -93,8 +98,9 @@ function q5() {
         if (question5 !== "yes" && question5 !== "y" && question5 !== "no" && question5 !== "n") {
             alert("Please provide a yes/y or no/n answer on the next try");
         } else if (question5 === "no" || question5 === "n") {
-            alert(" You are right! that is the end of the quiz "+ welcome);
+            alert(" You are right! that is the end of the first part "+ welcome);
             i++;
+            score++;
         } else if (question5 === "yes" || question5 === "y") {
             alert("Sorry! "+ welcome + " majority of them take naps on chairs");
             i++;
@@ -103,4 +109,71 @@ function q5() {
 };
 q5();
 
+
+
+
+
+
+
+
+function guess(){
+    let x;
+    let myNum;
+    for(x=1;x<5;x++){
+        myNum = prompt("For this section "+welcome+" I have a magic number, Can you try guessing it? ")
+        if (myNum != 20){
+            let y = 4-x ;
+            if(y==0){
+                alert("sorry! but the number is 20")
+            }else if(myNum < 20){
+                alert("your guess is too low")   
+                alert("please try again, you have "+ y+" attempt(s) left")
+            }else if(myNum > 20){
+                alert("your guess is too high")   
+                alert("please try again, you have "+ y+" attempt(s) left")
+            }
+        }
+        else if (myNum == 20){
+            alert("wow you read my mind")
+            score++;
+            break;
+        }
+    }             
+    };
+
+guess();
+
+
+
+
+function ndGuess(){
+   let ans = [15,2,9];
+   let b;
+   let test;
+   for(b=1;b<=7;b++){
+    test = prompt("This section should be easier "+welcome+" I have 3 magic numbers, try guessing any of them. ")
+    if (test != ans[0] && test != ans[1] && test != ans[2]){
+        let y = 7-b ;
+        if(y==0){
+            alert("sorry! but the numbers are "+ ans[0]+", "+ans[1]+" & "+ ans[2])
+        } 
+        else if(y==1){
+            alert("please try again, you have "+ y+" attempt left")
+        }
+        else {  
+            alert("please try again, you have "+ y+" attempts left")
+        }
+    }
+    else if (test == ans[0] || test == ans[1] || test == ans[2] ){
+        alert("wow you read my mind")
+        score++;
+        break;
+    }
+}             
+};
+
+ndGuess();
+
+
+alert(welcome+" your score is "+score);
 

@@ -15,10 +15,8 @@ body{
     background-color:black;
 }
 
-li{
-    display: inline;
-    margin: 0 auto;
-}
+
+
 
 h1{
     color: blueviolet;
@@ -66,7 +64,7 @@ footer{
 }
 
 section>h2{
-    text-align: center;
+    text-align: left;
     font-size: large;
     font-weight: 600;
 }
@@ -76,4 +74,29 @@ button{
     font-weight: 300;
     font-size: 16px;
     border-radius: 8px;
+}
+
+div>p{
+    color: white;
+    text-align: center;
+}
+
+.bat:hover {
+    background-color:#002ead;
+    transition: 0.7s;
+    color: white;
+}
+
+
+.line{
+    text-align: left;
+}
+
+.top10{
+    padding-left: 1rem;
+}
+
+.vac{
+    font-size: large;
+    font-weight: 600;
 }
