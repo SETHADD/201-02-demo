@@ -1,4 +1,5 @@
 'use strict'
+function total(){
 
 let welcome = prompt("Welcome! may I know your name? ");
 //console.log(welcome);
@@ -89,6 +90,7 @@ function q4() {
     }
 };
 q4();
+
 function q5() {
     let i = 0;
     while (i < 1) {
@@ -119,21 +121,23 @@ q5();
 function guess(){
     let x;
     let myNum;
+    const finder = Math.floor(Math.random() * 10 + 1);
+    console.log(finder);
     for(x=1;x<5;x++){
         myNum = prompt("For this section "+welcome+" I have a magic number between 1 and 10, Can you try guessing it? ")
-        if (myNum != 7){
+        if (myNum != finder){
             let y = 4-x ;
             if(y==0){
                 alert("sorry! but the number is "+myNum)
-            }else if(myNum < 7){
+            }else if(myNum < finder){
                 alert("your guess is too low")   
                 alert("please try again, you have "+ y+" attempt(s) left")
-            }else if(myNum > 7){
+            }else if(myNum > finder){
                 alert("your guess is too high")   
                 alert("please try again, you have "+ y+" attempt(s) left")
             }
         }
-        else if (myNum == 7){
+        else if (myNum == finder){
             alert("wow you read my mind")
             score++;
             break;
@@ -147,7 +151,13 @@ guess();
 
 
 function ndGuess(){
-   let ans = [15,2,9];
+    const try1 = Math.floor(Math.random() * 10 + 1);
+    console.log(try1);
+    const try2 = Math.floor(Math.random() * 10 + 1);
+    console.log(try2);
+    const try3 = Math.floor(Math.random() * 10 + 1);
+    console.log(try3);
+    let ans = [try1, try2, try3];
    let b;
    let test;
    for(b=1;b<=7;b++){
@@ -176,4 +186,7 @@ ndGuess();
 
 
 alert(welcome+" your score is "+score);
+
+//
+};
 
