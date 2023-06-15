@@ -120,20 +120,20 @@ function guess(){
     let x;
     let myNum;
     for(x=1;x<5;x++){
-        myNum = prompt("For this section "+welcome+" I have a magic number, Can you try guessing it? ")
-        if (myNum != 20){
+        myNum = prompt("For this section "+welcome+" I have a magic number between 1 and 10, Can you try guessing it? ")
+        if (myNum != 7){
             let y = 4-x ;
             if(y==0){
-                alert("sorry! but the number is 20")
-            }else if(myNum < 20){
+                alert("sorry! but the number is "+myNum)
+            }else if(myNum < 7){
                 alert("your guess is too low")   
                 alert("please try again, you have "+ y+" attempt(s) left")
-            }else if(myNum > 20){
+            }else if(myNum > 7){
                 alert("your guess is too high")   
                 alert("please try again, you have "+ y+" attempt(s) left")
             }
         }
-        else if (myNum == 20){
+        else if (myNum == 7){
             alert("wow you read my mind")
             score++;
             break;
@@ -151,7 +151,7 @@ function ndGuess(){
    let b;
    let test;
    for(b=1;b<=7;b++){
-    test = prompt("This section should be easier "+welcome+" I have 3 magic numbers, try guessing any of them. ")
+    test = prompt("This section should be easier "+welcome+" I have 3 magic numbers between 1 and 20, try guessing any of them. ")
     if (test != ans[0] && test != ans[1] && test != ans[2]){
         let y = 7-b ;
         if(y==0){
